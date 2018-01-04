@@ -329,7 +329,6 @@ class G2PModel(object):
     gr_absent = [gr for gr in word if gr not in self.gr_vocab]
     if gr_absent:
       print("Symbols '%s' are not in vocabulary" % "','".join(gr_absent).encode('utf-8'))
-      return ""
 
     # Get token-ids for the input word.
     token_ids = [self.gr_vocab.get(s, data_utils.UNK_ID) for s in word]
